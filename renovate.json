@@ -1,22 +1,42 @@
 {
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
   "packageRules": [
     {
-      "managers": ["dockerfile"],
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["fluent/fluentd"],
-      "updateTypes": ["minor", "patch"],
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "fluent/fluentd"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": false
     },
     {
-      "managers": ["dockerfile"],
-      "matchDatasources": ["rubygems"],
-      "matchPackageNames": ["fluent-plugin-s3"],
-      "updateTypes": ["minor", "patch"],
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchDatasources": [
+        "rubygems"
+      ],
+      "matchPackageNames": [
+        "fluent-plugin-s3"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": false
     }
   ],
-  "schedule": ["before 3am on Thursday"]
+  "schedule": [
+    "before 3am on Thursday"
+  ]
 }
