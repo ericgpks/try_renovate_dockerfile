@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "managers": ["dockerfile"],
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["fluent/fluentd"],
+      "updateTypes": ["minor", "patch"],
+      "automerge": false
+    },
+    {
+      "managers": ["dockerfile"],
+      "matchDatasources": ["rubygems"],
+      "matchPackageNames": ["fluent-plugin-s3"],
+      "updateTypes": ["minor", "patch"],
+      "automerge": false
+    }
+  ],
+  "schedule": ["before 3am on Thursday"]
+}
