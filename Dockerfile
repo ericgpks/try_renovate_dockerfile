@@ -1,11 +1,12 @@
 # ベースイメージとして Fluentd を使用
-FROM fluent/fluentd:v1.18-1
+FROM fluent/fluentd:v1.14-1
 
 # 必要なツールをインストール
 RUN apk add --no-cache build-base
 
-# プラグインをインストール
-RUN gem install fluent-plugin-s3 -v 1.7.2 --no-document
+# Gemfile をコピーしてプラグインをインストール
+COPY Gemfile Gemfile.lock /fluentd/
+RUN gem install bundler && bundle install --gemfile=/fluentd/Gemfile
 
 # 設定ファイルをコピー
 COPY fluent.conf /fluentd/etc/
