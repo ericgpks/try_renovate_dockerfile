@@ -25,7 +25,7 @@ GEM
     cool.io (1.9.0)
     csv (3.3.2)
     drb (2.2.1)
-    fluent-plugin-s3 (1.7.2)
+    fluent-plugin-s3 (1.8.2)
       aws-sdk-s3 (~> 1.60)
       aws-sdk-sqs (~> 1.23)
       fluentd (>= 0.14.22, < 2)
@@ -67,7 +67,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  fluent-plugin-s3 (= 1.7.2)
+  fluent-plugin-s3 (= 1.8.2)
 
 BUNDLED WITH
    2.5.6
