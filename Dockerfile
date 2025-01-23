@@ -1,5 +1,5 @@
 # ベースイメージとして Fluentd を使用
-FROM fluent/fluentd:v1.14-1
+FROM fluent/fluentd:v1.18-1
 
 # 必要なツールをインストール
 RUN apk add --no-cache build-base
